@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Encyclopedia;
-
+use Illuminate\Support\Facades\DB;
 class EncyclopediaController extends Controller
 {
     /**
@@ -12,10 +12,10 @@ class EncyclopediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $item = Encyclopedia::all();
-        return $item->toArray();
+        $items = DB::select('select * from encyclopedia_t');
+        return view('pedia.index', ['items' => $items]);
     }
 
     /**
