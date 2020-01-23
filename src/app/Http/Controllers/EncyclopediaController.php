@@ -14,7 +14,7 @@ class EncyclopediaController extends Controller
      */
     public function index(Request $request)
     {
-        $items = DB::select('select * from encyclopedia_t');
+        $items = Encyclopedia::all();
         return view('pedia.index', ['items' => $items]);
     }
 
@@ -87,18 +87,5 @@ class EncyclopediaController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function ses_get(Request $request)
-    {
-        $sesdata = $request->session()->get('msg');
-        return view('pedia.session', ['session_data' => $sesdata]);
-    }
-
-    public function ses_put(Request $request)
-    {
-        $msg = $request->input;
-        $request->session()->put('msg', $msg);
-        return redirect('pedia.session');
     }
 }

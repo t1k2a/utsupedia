@@ -9,7 +9,7 @@
 
 @section('content')
     <p>{{$session_data}}</p>
-    <form action="/pedia/session" method="POST">
+    <form action="/session" method="POST">
         {{ csrf_field() }}
     <input type="text" name="input">
     <input type="submit" value="send">
