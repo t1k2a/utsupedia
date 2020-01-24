@@ -14,7 +14,8 @@ class EncyclopediaController extends Controller
      */
     public function index(Request $request)
     {
-        $items = Encyclopedia::orderBy('Updated_at', 'desc')->get();
+        $items = Encyclopedia::orderBy('updated_at', 'desc')->get();
+
         return view('pedia.index', ['items' => $items]);
     }
 
@@ -51,8 +52,9 @@ class EncyclopediaController extends Controller
      */
     public function show($id)
     {
-        $items = Encyclopedia::find($id);
-        return $items->toarray();
+        $item = Encyclopedia::find($id);
+
+        return view('pedia.show', ['item' => $item]);
     }
 
     /**
