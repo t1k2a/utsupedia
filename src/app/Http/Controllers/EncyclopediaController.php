@@ -14,7 +14,7 @@ class EncyclopediaController extends Controller
      */
     public function index(Request $request)
     {
-        $items = Encyclopedia::all();
+        $items = Encyclopedia::orderBy('Updated_at', 'desc')->get();
         return view('pedia.index', ['items' => $items]);
     }
 
