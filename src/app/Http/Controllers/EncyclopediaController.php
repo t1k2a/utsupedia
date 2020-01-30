@@ -52,8 +52,7 @@ class EncyclopediaController extends Controller
      */
     public function show($id)
     {
-        $item = Encyclopedia::find($id);
-
+        $item = Encyclopedia::findOrFail($id);
         return view('pedia.show', ['item' => $item]);
     }
 
@@ -65,7 +64,8 @@ class EncyclopediaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Encyclopedia::findOrFail($id);
+        return view('pedia.edit', ['item' => $item]);
     }
 
     /**
@@ -75,9 +75,16 @@ class EncyclopediaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+       $param = [
+            'title' => $request->title,
+            'contents' => $request->contents,
+        ];
+        DB::table('encyclopedia_t')
+            ->where('id', $request->id)
+            ->update($param);
+        return redirect('pedia/'.$request->id);
     }
 
     /**

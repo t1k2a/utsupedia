@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('pedia', 'EncyclopediaController');
+Route::resource('pedia', 'EncyclopediaController', ['except' => ['update']]);
+Route::post('update', 'EncyclopediaController@update');
 
 Route::get('session', 'SessionController@ses_get');
 Route::post('session', 'SessionController@ses_put');
