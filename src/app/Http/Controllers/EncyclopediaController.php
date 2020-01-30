@@ -95,6 +95,7 @@ class EncyclopediaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Encyclopedia::findOrFail($id)->delete();
+        return redirect('/pedia');
     }
 }
