@@ -1,2 +1,2 @@
-web: docker/nginx/default.conf public/
+web: /docker/nginx/default.conf public/
 
