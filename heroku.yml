@@ -2,4 +2,4 @@ build:
     docker:
         web: /docker/php/Dockerfile
 run:
-    web: docker exec app ash
+    web: bundle exec puma -C config/puma.rb
