@@ -10,13 +10,20 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous"
     >
-    {{-- <link rel="stylesheet" type="text/css" href="/css/style.css"> --}}
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <header class="navbar navbar-dark bg-dark">
-        <div class="container">
+        <div class="header-list">
             <a class="navbar-brand" href="/pedia">
                 うつペディア
+            </a>
+            <a class="nav-link nav-list-item" href="/pedia">
+                記事一覧
+            </a>
+            <a class="nav-link nav-list-item" href="#">
+                コラム
             </a>
         </div>
     </header>

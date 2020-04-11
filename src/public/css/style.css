@@ -1,0 +1,17 @@
+@media screen and (max-width: 1000pz) {
+    * {
+        width: 98%;
+    }
+}
+
+.header-list {
+    display: -webkit-flex;
+    display: flex;
+    margin-left: 50px;
+}
+
+.nav-list-item {
+    list-style: none;
+    color:#ffffff;
+
+}

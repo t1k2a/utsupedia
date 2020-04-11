@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="mb-4">
-        <a href="pedia/create" class="btn btn-primary">
+        <a href="pedia/create" class="btn btn-primary" style="margin-top:30px;">
             新規作成
         </a>
     </div>
