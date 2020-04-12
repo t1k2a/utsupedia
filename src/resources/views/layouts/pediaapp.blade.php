@@ -22,7 +22,7 @@
             <a class="nav-link nav-list-item" href="/pedia">
                 記事一覧
             </a>
-            <a class="nav-link nav-list-item" href="#">
+            <a class="nav-link nav-list-item" href="/column">
                 コラム
             </a>
         </div>
