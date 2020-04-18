@@ -11,7 +11,7 @@
         crossorigin="anonymous"
     >
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     <header class="navbar navbar-dark bg-dark">
