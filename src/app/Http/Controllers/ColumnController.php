@@ -64,7 +64,8 @@ class ColumnController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Column::findOrFail($id);
+        return view('column.edit', ['item' => $item]);
     }
 
     /**
@@ -74,9 +75,17 @@ class ColumnController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $param = [
+            'id' => $request->id,
+            'title' => $request->title,
+            'contents' => $request->contents,
+        ];
+        Column::where('id', $param['id'])
+                ->update(['title' => $param['title'],
+                        'contents' => $param['contents']]);
+        return redirect('column/'.$request->id);
     }
 
     /**
