@@ -8,13 +8,12 @@ class Column extends Model
 {
     protected $table = 'column_t';
     protected $gurded = array('id');
-
     public static $rules = array(
         'title' => 'required|max:100',
         'contents' => 'required|max:1000'
     );
 
-    public function getData()
+    function getData()
     {
         return $this->title. ':' . $this->contents;
     }
