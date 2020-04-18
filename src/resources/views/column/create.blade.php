@@ -1,4 +1,5 @@
 @extends('layouts.pediaapp')
+@section('title', 'コラム作成')
 
 @section('content')
 <div class="container mt-4">
@@ -40,7 +41,7 @@
                 </div>
 
                 <div class="mt-5">
-                    <a class="btn btn-secondary" href="column">
+                    <a class="btn btn-secondary" href="/column">
                         キャンセル
                     </a>
 

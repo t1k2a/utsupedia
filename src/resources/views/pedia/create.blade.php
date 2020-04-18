@@ -40,7 +40,7 @@
             </div>
 
             <div class="mt-5">
-                <a class="btn btn-secondary" href="pedia">
+                <a class="btn btn-secondary" href="/pedia">
                     キャンセル
                 </a>
 
