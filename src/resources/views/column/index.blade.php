@@ -20,7 +20,7 @@
             <p class="card-text">
                 {!! nl2br(e(Str::limit($item->contents, 200))) !!}
             </p>
-            <a class="card-link" href="/pedia/{{ $item->id }}">
+            <a class="card-link" href="/column/{{ $item->id }}">
                 続きを見る
             </a>
         </div>

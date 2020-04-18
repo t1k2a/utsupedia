@@ -52,7 +52,8 @@ class ColumnController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = Column::findOrFail($id);
+        return view('column.show', ['item' => $item]);
     }
 
     /**
