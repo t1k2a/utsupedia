@@ -10,7 +10,7 @@ class Column extends Model
     protected $gurded = array('id');
 
     public static $rules = array(
-        'title' => 'required|mac:100',
+        'title' => 'required|max:100',
         'contents' => 'required|max:1000'
     );
 
