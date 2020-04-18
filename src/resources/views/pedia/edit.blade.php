@@ -7,7 +7,7 @@
                 編集
             </h1>
 
-            <form action="/update" method="POST">
+            <form action="/pediaUpdate" method="POST">
                 {{ csrf_field() }}
                 <input type="hidden" name="id" value="{{$item->id}}">
                 <fieldset class="mb-4">

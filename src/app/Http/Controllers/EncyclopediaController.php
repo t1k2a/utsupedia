@@ -77,13 +77,10 @@ class EncyclopediaController extends Controller
      */
     public function update(Request $request)
     {
-       $param = [
-            'title' => $request->title,
-            'contents' => $request->contents,
-        ];
-        DB::table('encyclopedia_t')
-            ->where('id', $request->id)
-            ->update($param);
+        EncyClopedia::where('id', $request->id)
+                      ->update(['title' => $request->title,
+                                'contents' => $request->contents,
+                                ]);
         return redirect('pedia/'.$request->id);
     }
 

@@ -77,14 +77,10 @@ class ColumnController extends Controller
      */
     public function update(Request $request)
     {
-        $param = [
-            'id' => $request->id,
-            'title' => $request->title,
-            'contents' => $request->contents,
-        ];
-        Column::where('id', $param['id'])
-                ->update(['title' => $param['title'],
-                        'contents' => $param['contents']]);
+        Column::where('id', $request->id)
+                ->update(['title' => $request->title,
+                          'contents' => $request->contents,
+                        ]);
         return redirect('column/'.$request->id);
     }
 

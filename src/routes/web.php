@@ -15,11 +15,11 @@ Route::get('/', function () {
     return redirect('/pedia');
 });
 
-Route::resource('pedia', 'EncyclopediaController', ['except' => ['update']]);
-Route::post('update', 'EncyclopediaController@update');
+Route::resource('pedia', 'EncyclopediaController');
+Route::post('pediaUpdate', 'EncyclopediaController@update');
 
-Route::resource('column', 'ColumnController', ['except' => ['update']]);
-Route::post('update', 'ColumnController@update');
+Route::resource('column', 'ColumnController');
+Route::post('columnUpdate', 'ColumnController@update');
 
 Route::get('session', 'SessionController@ses_get');
 Route::post('session', 'SessionController@ses_put');
