@@ -26,7 +26,7 @@ class ColumnController extends Controller
      */
     public function create()
     {
-        //
+        return view('column.create');
     }
 
     /**
@@ -37,7 +37,11 @@ class ColumnController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $columndata = new Column;
+        $form = $request->all();
+        unset($form['_token']);
+        $columndata->fill($form)->save();
+        return redirect('/column');
     }
 
     /**

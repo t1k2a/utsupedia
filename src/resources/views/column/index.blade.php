@@ -6,7 +6,7 @@
         コラム
     </h1>
     <div class="mb-4">
-        <a href="#" class="btn btn-primary" style="margin-top:30px;">
+        <a href="column/create" class="btn btn-primary" style="margin-top:30px;">
             新規作成
         </a>
     </div>

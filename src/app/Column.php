@@ -8,6 +8,7 @@ class Column extends Model
 {
     protected $table = 'column_t';
     protected $gurded = array('id');
+    protected $fillable = ['title', 'contents'];
     public static $rules = array(
         'title' => 'required|max:100',
         'contents' => 'required|max:1000'
