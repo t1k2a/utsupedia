@@ -96,6 +96,7 @@ class ColumnController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Column::findOrFail($id)->delete();
+        return redirect('/column');
     }
 }
