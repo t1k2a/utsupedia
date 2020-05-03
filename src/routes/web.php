@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('HelloWorld', function () {
+    return view('HelloWorld');
+});
+
 Route::get('/', function () {
     return redirect('/pedia');
 });
