@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('title')</title>
 
+
     <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -12,6 +13,8 @@
     >
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css') }}">
+
 
 </head>
 <body>
@@ -32,11 +35,17 @@
             </a>
         </div>
     </header>
-
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h1>hello</h1>
+            </div>
+        </div>
+    </div>         
     <div class="container">
+        
         @yield('content')
     </div>
         <script src="{{ asset('/js/pedia.js') }}"></script>
-
 </body>
 </html>
