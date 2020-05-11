@@ -16,6 +16,8 @@
         ]
     },
     "include": [
-        "resources/ts/**/*" // TypeScriptのソース配置場所
+        "resources/ts/**/*",
+        "resources/js/app.js",
+        "public/js/pedia.js" // TypeScriptのソース配置場所
     ]
 }
