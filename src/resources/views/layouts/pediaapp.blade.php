@@ -34,18 +34,34 @@
                 問い合わせ
             </a>
         </div>
-    </header>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-body">
-                <h1>hello</h1>
-            </div>
-        </div>
-    </div>         
-    <div class="container">
-        
+    </header>    
+    <div class="container"> 
         @yield('content')
     </div>
-        <script src="{{ asset('/js/pedia.js') }}"></script>
+       <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <label for="name">名前</label>
+                <input type="text" name="name">
+                <br>
+                <label for="content">内容</label> 
+                <textarea name="content"></textarea>
+                <br>
+                <button type="submit" class="btn btn-primary">
+                    送信
+                </button>
+                <br>
+                <button type="button" id="close">
+                    閉じる
+                    <script>
+                        document.getElementById("close").addEventListener('click', function () {
+                            modal.style.display = 'none';
+                        });
+                    </script>
+                </button>
+            </div>
+        </div>
+    </div>    
+    <script src="{{ asset('/js/pedia.js') }}"></script> 
 </body>
 </html>
