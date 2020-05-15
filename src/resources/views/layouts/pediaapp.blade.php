@@ -47,13 +47,17 @@
                 <label for="content">内容</label> 
                 <textarea name="content"></textarea>
                 <br>
-                <button type="submit" class="btn btn-primary">
+                <a href="mailSample">メール画面サンプル</a>
+                <a href="sendContact">メール送信サンプル</a>
+                <br>
+                <button type="submit" class="btn btn-primary" formaction="sendContact">
                     送信
                 </button>
                 <br>
                 <button type="button" id="close">
                     閉じる
-                    <script>
+                    <script> 
+                    // jsファイルで書きたい
                         document.getElementById("close").addEventListener('click', function () {
                             modal.style.display = 'none';
                         });

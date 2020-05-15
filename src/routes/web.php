@@ -27,3 +27,8 @@ Route::post('columnUpdate', 'ColumnController@update');
 
 Route::get('session', 'SessionController@ses_get');
 Route::post('session', 'SessionController@ses_put');
+
+Route::get('mailSample', function(){
+    return new App\Mail\SendContact("何々さん","こんにちは");
+});
+Route::get('sendContact', 'Contact@notification');
