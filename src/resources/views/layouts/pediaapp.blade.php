@@ -14,8 +14,6 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css') }}">
-
-
 </head>
 <body>
 
@@ -40,19 +38,23 @@
     </div>
        <div id="modal" class="modal">
         <div class="modal-content">
-            <div class="modal-body">
+            <header class="bg-dark" style="text-align:center; color:white">
+                    問い合わせる
+            </header>
+            <div class="modal-body" style="text-align: center">
                 <form action="sendContact">
-                    <label for="name">名前</label>
+                    <label for="name">名前:</label>
                     <input type="text" name="name" value="">
                     <br>
-                    <label for="content">内容</label> 
+                    <label for="content">内容@auth
+                        
+                    @endauth</label> 
                     <textarea name="content" value=""></textarea>
                     <br>
                     <button type="submit" formaction="sendContact" class="btn btn-primary">
                         送信
                     </button>
                 </form>
-                <br>
                 <button type="button" id="close">
                     閉じる
                     <script> 
