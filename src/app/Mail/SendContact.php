@@ -14,17 +14,17 @@ class SendContact extends Mailable
     use Queueable, SerializesModels;
 
     protected $name;
-    protected $text;
+    protected $content;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($name, $text)
+    public function __construct($contactData)
     {
-        $this->name = $name;
-        $this->text = $text;
+        $this->name = $contactData['name'];
+        $this->content = $contactData['content'];
     }
 
     /**
@@ -34,11 +34,11 @@ class SendContact extends Mailable
      */
     public function build()
     {
-        return $this->view('contact.result')
-                ->text('contact.message')
+         $this->text('contact.message')
                 ->subject('お問い合わせが届きました')
                 ->with([
-                    'text' => $this->text
+                    'name'    => $this->name,
+                    'content' => $this->content
                 ]);
     }
 }

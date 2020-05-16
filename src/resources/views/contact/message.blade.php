@@ -1,12 +1,9 @@
-@extends('layouts.pediaapp')
-@section('title', 'うつペディア')
 
-@section('content')
 Sample Notification!
 
 A sample notification has been sent.
 
-{{$text}}
+{{$name}}
+{{$content}}
 
 https://www.google.co.jp
-@endsection

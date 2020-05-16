@@ -8,13 +8,17 @@ use App\Mail\SendContact;
 
 class Contact extends Controller
 {
-    public function notification()
+    public function notification(Request $request)
     {
-        $name = 'ララベル太郎';
-        $text = 'これからもよろしくお願いいたします。';
-        $to = 'test@gmail.com';
-        Mail::to($to)->send(new SendContact($name, $text));
+        $contactData = [
+            'name' => $request->name,
+            'content' => $request->content                   
+        ];
+        $name = $request->name;
+        $content = $request->content;
+        $to = 'utsupedia@gmail.com';
+        Mail::to($to)->send(new SendContact($contactData));
 
-        return view('contact.result', ['text' => $text]);
+        return view('contact.result', ['contactData' => $contactData]);
     }
 }

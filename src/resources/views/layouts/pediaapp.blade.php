@@ -41,18 +41,17 @@
        <div id="modal" class="modal">
         <div class="modal-content">
             <div class="modal-body">
-                <label for="name">名前</label>
-                <input type="text" name="name">
-                <br>
-                <label for="content">内容</label> 
-                <textarea name="content"></textarea>
-                <br>
-                <a href="mailSample">メール画面サンプル</a>
-                <a href="sendContact">メール送信サンプル</a>
-                <br>
-                <button type="submit" class="btn btn-primary" formaction="sendContact">
-                    送信
-                </button>
+                <form action="sendContact">
+                    <label for="name">名前</label>
+                    <input type="text" name="name" value="">
+                    <br>
+                    <label for="content">内容</label> 
+                    <textarea name="content" value=""></textarea>
+                    <br>
+                    <button type="submit" formaction="sendContact" class="btn btn-primary">
+                        送信
+                    </button>
+                </form>
                 <br>
                 <button type="button" id="close">
                     閉じる
