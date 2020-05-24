@@ -29,7 +29,7 @@
                 コラム
             </a>
             <a class="nav-link nav-list-item" id="contact" href="#" >
-                問い合わせ
+                うつ病に関する相談はこちら
             </a>
         </div>
     </header>    
@@ -39,31 +39,29 @@
        <div id="modal" class="modal">
         <div class="modal-content">
             <header class="bg-dark" style="text-align:center; color:white">
-                    問い合わせる
+                　　うつ病に関する相談はこちら
+                <button style="float:right;" class="modal-close">
+                    ×
+                </button>
             </header>
-            <div class="modal-body" style="text-align: center">
+            <div class="modal-body">
                 <form action="sendContact">
-                    <label for="name">名前:</label>
-                    <input type="text" name="name" value="">
-                    <br>
-                    <label for="content">内容@auth
-                        
-                    @endauth</label> 
-                    <textarea name="content" value=""></textarea>
-                    <br>
-                    <button type="submit" formaction="sendContact" class="btn btn-primary">
+                    <input type="text" placeholder="名前" name="name" required>
+                    <textarea placeholder="内容" name="content" required></textarea>
+
+                    <button type="submit" formaction="sendContact" class="btn btn-success">
                         送信
                     </button>
                 </form>
-                <button type="button" id="close">
-                    閉じる
                     <script> 
-                    // jsファイルで書きたい
-                        document.getElementById("close").addEventListener('click', function () {
+                        document.querySelector(".modal-close").addEventListener('click', function(){
                             modal.style.display = 'none';
                         });
+
+                        // document.querySelector("#modal").addEventListener('click', function(){
+                        //     modal.style.display = 'none';
+                        // });
                     </script>
-                </button>
             </div>
         </div>
     </div>    

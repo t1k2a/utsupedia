@@ -15,3 +15,32 @@
     width: 500px;
     margin: 10% auto;
 }
+
+.modal-header{
+    text-align:center;
+    color:white;
+}
+
+form{
+    position: relative;
+    top:10%;
+    width: 50%;
+    margin: 1% auto;
+    min-width: 9rem;
+}
+
+input, textarea {
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background: darken(#f9f9f9, 10%);
+  color: darken(#f9f9f9, 50%);
+}
+
+textarea {
+  height: 10rem;
+}
