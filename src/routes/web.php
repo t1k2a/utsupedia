@@ -29,3 +29,6 @@ Route::get('session', 'SessionController@ses_get');
 Route::post('session', 'SessionController@ses_put');
 
 Route::get('sendContact', 'Contact@notification');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
