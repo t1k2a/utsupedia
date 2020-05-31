@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Column;
 
 class ColumnController extends Controller
@@ -14,9 +15,10 @@ class ColumnController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $items = Column::orderBy('updated_at', 'desc')->get();
         
-        return view('column.index', ['items' => $items]);
+        return view('column.index', ['items' => $items, 'user' => $user]);
     }
 
     /**
@@ -52,6 +54,7 @@ class ColumnController extends Controller
      */
     public function show($id)
     {
+        $user = Auth::user();
         $item = Column::findOrFail($id);
         return view('column.show', ['item' => $item]);
     }

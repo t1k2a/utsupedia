@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Encyclopedia;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 class EncyclopediaController extends Controller
 {
     /**
@@ -14,9 +15,10 @@ class EncyclopediaController extends Controller
      */
     public function index(Request $request)
     {
+        $user = Auth::user();
         $items = Encyclopedia::orderBy('updated_at', 'desc')->get();
 
-        return view('pedia.index', ['items' => $items]);
+        return view('pedia.index', ['items' => $items, 'user' => $user]);
     }
 
     /**
@@ -52,8 +54,9 @@ class EncyclopediaController extends Controller
      */
     public function show($id)
     {
+        $user = Auth::user();
         $item = Encyclopedia::findOrFail($id);
-        return view('pedia.show', ['item' => $item]);
+        return view('pedia.show', ['item' => $item, 'user' => $user]);
     }
 
     /**

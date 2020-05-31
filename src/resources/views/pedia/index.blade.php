@@ -6,9 +6,11 @@
         記事一覧
     </h1>
     <div class="mb-4">
-        <a href="pedia/create" class="btn btn-primary" style="margin-top:30px;">
-            新規作成
-        </a>
+        @auth
+            <a href="pedia/create" class="btn btn-primary" style="margin-top:30px;">
+                新規作成
+            </a>
+        @endauth
     </div>
     <div class="cotainer mt-4">
     @foreach ($items as $item)
