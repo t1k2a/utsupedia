@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('title')</title>
 
-
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -14,6 +14,17 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css') }}">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            const hum = $('#hamburger, .close')
+            const nav = $('.sp-nav')
+            hum.on('click', function(){
+                nav.toggleClass('toggle');
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -32,7 +43,36 @@
                 うつ病に関する相談はこちら
             </a>
         </div>
-    </header>    
+    </header> 
+    <nav class="sp-nav">
+        <ul>
+            <li>
+                <a class="nav-link nav-list-item" href="/pedia">
+                    記事一覧
+                </a>
+            </li>
+            <li>
+                <a class="nav-link nav-list-item" href="/column">
+                    コラム
+                </a>
+            </li>
+            <li>    
+                <a class="nav-link nav-list-item" id="contact" href="#" >
+                    うつ病に関する相談はこちら
+                </a>
+            </li>
+            <li class="close">
+                <span>
+                    閉じる
+                </span>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="hamburger">
+        <span></span>
+    </div>
+ 
     <div class="container"> 
         @yield('content')
     </div>
