@@ -44,3 +44,17 @@ input, textarea {
 textarea {
   height: 10rem;
 }
+
+@media screen and (max-width:640px) {
+
+  .modal-content{
+      background-color: white;
+      width: 100%;
+      margin: 10% auto;
+  }
+
+  .modal-close{
+    float: right;
+  }
+
+}
