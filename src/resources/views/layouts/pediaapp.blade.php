@@ -44,6 +44,11 @@
             </a>
         </div>
     </header> 
+
+        <div id="hamburger">
+            <span></span>
+        </div>
+
     <nav class="sp-nav">
         <ul>
             <li>
@@ -63,15 +68,11 @@
             </li>
             <li class="close">
                 <span>
-                    閉じる
+                    ×閉じる
                 </span>
             </li>
         </ul>
     </nav>
-
-    <div id="hamburger">
-        <span></span>
-    </div>
  
     <div class="container"> 
         @yield('content')
