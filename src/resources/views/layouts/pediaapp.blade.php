@@ -80,10 +80,7 @@
        <div id="modal" class="modal">
         <div class="modal-content">
             <header class="bg-dark" style="text-align:center; color:white">
-                　　うつ病に関する相談はこちら
-                <button style="float:right;" class="modal-close">
-                    ×
-                </button>
+                　　うつ病に関する相談はこちら <span class="modal-close">×閉じる</span>
             </header>
             <div class="modal-body">
                 <form action="sendContact">
@@ -99,9 +96,9 @@
                             modal.style.display = 'none';
                         });
 
-                        // document.querySelector("#modal").addEventListener('click', function(){
-                        //     modal.style.display = 'none';
-                        // });
+                        document.querySelector("#modal").addEventListener('click', function(){
+                            modal.style.display = 'none';
+                        });
 
                         // I'm going to create js file
                         var pedia = /** @class */ (function () {
@@ -115,7 +112,7 @@
                         }());
                         var click_contact = new pedia();
                         var modal = document.getElementById('modal');
-                        click_contact.clickContact();
+                        click_contact.clickContact();                        
                     </script>
             </div>
         </div>
