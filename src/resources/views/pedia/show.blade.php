@@ -5,17 +5,15 @@
         <div class="border p-4">
             <div class="mb-4 text-right">
                 @auth
-                    <a class="btn btn-primary" href="{{$item->id}}/edit">
-                        編集する
-                    </a>
-                @endauth
-                <form style='display: inline-block;' method="POST"
+                <form style='' method="POST"
                     action="/pedia/{{$item->id}}"
                 > 
+                    <a style="width:10% display:flex; flex-direction: row;" class="btn btn-primary" href="{{$item->id}}/edit">
+                        編集する
+                    </a>
                     @csrf
-                @auth
                     @method('DELETE')
-                    <button class="btn btn-danger">削除する</button>
+                    <button style="width:20% display:flex; flex-direction: row;" class="btn btn-danger">削除する</button>
                 @endauth
                 </form>
             </div>
