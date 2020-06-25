@@ -19,7 +19,22 @@ $ php artisan migrate
 $ docker-compose exec db bash -c 'mysql -u${MYSQL_USER} -p${MYSQL_PASSWORD} ${MYSQL_DATABASE}'
 ```
 
+## ビルド
+
+```
+$ cd app
+$ npm run dev
+```
+
+## ビルド（ホットリロード付き）
+
+```
+$ cd app
+$ npm run watch
+```
+
 ## 参考
 - [【初心者向け】20分でLaravel開発環境を爆速構築するDockerハンズオン](https://qiita.com/ucan-lab/items/56c9dc3cf2e6762672f4)
  - [【入門】Laravelチュートリアル – 掲示板を作成してみよう
 ](https://blog.hiroyuki90.com/articles/laravel-bbs/)
+- [Laravel MixでbrowserSync(hot reload)を有効化する](https://qiita.com/ProjectEuropa/items/901f22b941c1b272d59c)
