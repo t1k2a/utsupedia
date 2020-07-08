@@ -129,7 +129,7 @@
 /* 
     継承先ページ共通レイアウト    
 */
-h1 {
+py-4 > h1 {
     margin-top: 30px;
     border-bottom: solid 3px black;
 }

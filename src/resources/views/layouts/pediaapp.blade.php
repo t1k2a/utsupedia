@@ -42,6 +42,9 @@
             <a class="nav-link nav-list-item" id="contact" href="#" >
                 うつ病に関する相談はこちら
             </a>
+            <a class="nav-link nav-list-item" href="/aboutMe">
+                ABOUT ME
+            </a>
         </div>
     </header> 
 
