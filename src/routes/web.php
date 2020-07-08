@@ -19,6 +19,10 @@ Route::get('/', function () {
     return redirect('/pedia');
 });
 
+Route::get('aboutMe', function () {
+    return view('aboutMe');
+});
+
 Route::resource('pedia', 'EncyclopediaController');
 Route::post('pediaUpdate', 'EncyclopediaController@update');
 

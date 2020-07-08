@@ -16,7 +16,7 @@ class ColumnController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $items = Column::orderBy('updated_at', 'desc')->simplePaginate(5);
+        $items = Column::orderBy('updated_at', 'desc')->paginate(5);
         
         return view('column.index', ['items' => $items, 'user' => $user]);
     }
