@@ -26,7 +26,11 @@
             </h1>
 
             <p class="mb-5">
-                {!! nl2br(e($item->contents)) !!}
+            @php
+                $converter = new \cebe\markdown\MarkdownExtra();
+                $item->contents = $converter->parse($item->contents);
+            @endphp  
+            {!! $item->contents !!}
             </p>
         </div>
     </div>

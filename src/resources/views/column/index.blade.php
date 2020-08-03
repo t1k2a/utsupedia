@@ -20,7 +20,11 @@
         </div>
         <div class="card-body">
             <p class="card-text">
-                {!! nl2br(e(Str::limit($item->contents, 200))) !!}
+            @php
+                $converter = new \cebe\markdown\MarkdownExtra();
+                $item->contents = $converter->parse($item->contents);
+            @endphp  
+            {!! $item->contents !!}
             </p>
             <a class="card-link" href="/column/{{ $item->id }}">
                 続きを見る
