@@ -13,22 +13,22 @@
             <p>うつ病を乗り越えたへっぽこエンジニア</p>
             <ul>
                 <li>
-                    <a href="https://twitter.com/George23767665">
+                    <a href="https://twitter.com/George23767665" target="_blank">
                     <img src="img/twitter.png" width="30" height="30">
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/profile.php?id=100009791496155">
+                    <a href="https://www.facebook.com/profile.php?id=100009791496155" target="_blank">
                         <img src="img/facebook.png" width="30" height="30">
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/george_onepiece_naruto/">
+                    <a href="https://www.instagram.com/george_onepiece_naruto/" target="_blank">
                         <img src="img/instagram.png" width="30" height="30">
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.wantedly.com/users/103094284">
+                    <a href="https://www.wantedly.com/users/103094284" target="_blank">
                         <img src="img/wantedly.png" width="30" height="30">
                     </a>
                 </li>
