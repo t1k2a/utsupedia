@@ -1,0 +1,34 @@
+/* 投稿詳細画面 */
+.show-title {
+    font-size: 3.5rem;
+}
+
+.show-post {
+    margin-left: 30px;
+}
+
+.show-post > h1{
+    margin-top: 30px;
+    border-bottom: solid 3px black;
+}
+
+.show-post > h2 {
+    margin-top: 30px;
+    padding-left: 15px;
+    border-left: 4px solid #000;
+}
+
+.show-post > h3 {
+    margin: 30px 0 20px 0;
+}
+
+.show-post > pre > code {
+    font-family: monospace;
+    padding:  10px 15px ;
+    box-sizing: border-box;
+    display: block;
+    background: #1f1f1f;
+    color: #fafafa;
+    overflow: auto;
+    white-space: pre
+}

@@ -1,34 +1,35 @@
 @extends('layouts.pediaapp')
 
 @section('content')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/markdown.css') }}">
     <div class="container mt-4">
         <div class="border p-4">
             <div class="mb-4 text-right">
                 @auth
-                <form style='' method="POST"
+                <form style='display: inline-block;' method="POST"
                     action="/pedia/{{$item->id}}"
                 > 
-                    <a style="width:10% display:flex; flex-direction: row;" class="btn btn-primary" href="{{$item->id}}/edit">
+                    <a class="btn btn-primary" href="{{$item->id}}/edit">
                         編集する
                     </a>
                     @csrf
                     @method('DELETE')
-                    <button style="width:20% display:flex; flex-direction: row;" class="btn btn-danger">削除する</button>
+                    <button class="btn btn-danger">削除する</button>
                 @endauth
                 </form>
             </div>
 
-            <h1 class="h5 mb-4">
+            <h1 class="mb-4 show-title">
                 {{ $item->title }}
             </h1>
 
-            <p class="mb-5">
+            <div class="mb-5 show-post">
             @php
                 $converter = new \cebe\markdown\MarkdownExtra();
                 $item->contents = $converter->parse($item->contents);
             @endphp  
                 {!! $item->contents !!}
-            </p>
+            </div>
         </div>
     </div>
 @endsection
