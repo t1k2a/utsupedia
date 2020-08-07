@@ -1,4 +1,5 @@
 @extends('layouts.pediaapp')
+@section('title', '記事作成')
 
 @section('content')
 <div class="container mt-4">

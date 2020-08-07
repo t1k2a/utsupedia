@@ -15,89 +15,17 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css') }}">
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-
-    <script>
-        $(function() {
-            const hum = $('#hamburger, .close')
-            const nav = $('.sp-nav')
-            hum.on('click', function(){
-                nav.toggleClass('toggle');
-            });
-        });
-    </script>
 </head>
 <body>
+    @include('layouts.header')
 
-    <header class="navbar navbar-dark bg-dark">
-        <div class="header-list">
-            <a class="navbar-brand" href="/pedia">
-                うつペディア
-            </a>
-            <a class="nav-link nav-list-item" href="/pedia">
-                記事一覧
-            </a>
-            <a class="nav-link nav-list-item" href="/column">
-                コラム
-            </a>
-            <a class="nav-link nav-list-item" id="contact" href="#" >
-                うつ病に関する相談はこちら
-            </a>
-            <a class="nav-link nav-list-item" href="/aboutMe">
-                ABOUT ME
-            </a>
-        </div>
-    </header> 
-
-        <div id="hamburger">
-            <span></span>
-        </div>
-
-    <nav class="sp-nav">
-        <ul>
-            <li>
-                <a class="nav-link nav-list-item" href="/pedia">
-                    記事一覧
-                </a>
-            </li>
-            <li>
-                <a class="nav-link nav-list-item" href="/column">
-                    コラム
-                </a>
-            </li>
-            <li>    
-                <a class="nav-link nav-list-item" id="contact2" href="#" >
-                    うつ病に関する相談はこちら
-                </a>
-            </li>
-            <li class="close">
-                <span>
-                    ×閉じる
-                </span>
-            </li>
-        </ul>
-    </nav>
+    @include('layouts.hamburgerMenu')
  
     <div class="container"> 
         @yield('content')
     </div>
-       <div id="modal" class="modal">
-        <div class="modal-content">
-            <header class="bg-dark" style="text-align:center; color:white">
-                　　うつ病に関する相談はこちら <span class="modal-close">×閉じる</span>
-            </header>
-            <div class="modal-body">
-                <form action="sendContact">
-                    <input type="text" placeholder="名前" name="name" required>
-                    <textarea placeholder="内容" name="content" required></textarea>
 
-                    <button type="submit" formaction="sendContact" class="btn btn-success">
-                        送信
-                    </button>
-                </form>
-                <script src="{{ asset('/js/closeModal.js') }}"></script>
-            </div>
-        </div>
-    </div>    
+    @include('layouts.modalContact')
     <script src="{{ asset('/js/pedia.js') }}"></script> 
 </body>
 </html>

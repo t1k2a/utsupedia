@@ -1,4 +1,5 @@
 @extends('layouts.pediaapp')
+@section('title', $item->title)
 
 @section('content')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/markdown.css') }}">
