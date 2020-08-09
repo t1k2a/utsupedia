@@ -1,0 +1,102 @@
+/* スマホサイズになった時のハンバーガーメニュー */
+@media screen and (max-width:640px) {
+    .sp-header {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    #hamburger {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 25px;
+        margin: 10px 0 0 auto;
+    }
+
+    #hamburger span{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        display: block;
+        height: 2px;
+        background-color: #ffffff;
+        transform: translateY(-50%);
+    }
+
+    #hamburger::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+    }
+
+    #hamburger::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 70%;
+        height: 2px;
+        background-color: #ffffff;
+    }
+
+    .sp-nav {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: 100vh; */
+        display: block;
+        width: 100%;
+        background: #343a40!important;
+        opacity: 0;
+        text-align: center;
+        transform: translateY(-100%);
+        transition: all .2S ease-in-out;
+    }
+
+    .sp-nav ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .sp-nav li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sp-nav li span {
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .sp-nav li a, .sp-nav li span {
+        display: block;
+        padding: 20px 0;
+    }
+
+    .spn-nav .close {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .toggle {
+      transform: translateY( 0 );
+      opacity: 1;
+   }
+
+}

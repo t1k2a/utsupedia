@@ -2,6 +2,7 @@
 @section('title', 'ABOUT ME')
 
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/aboutMe.css') }}'">
 
 <header>
     <div class="introduction">
