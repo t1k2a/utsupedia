@@ -14,28 +14,17 @@
     </div>
     <div class="cotainer mt-4">
     @foreach ($items as $item)
-    <div class="card mb-4">
-        <div class="card-header">
-            {{ $item->title }}
-        </div>
-        <div class="card-body">
-            <p class="card-text">
-            @php
-            // Controllerに置くと遅くなるため
-                $converter = new \cebe\markdown\MarkdownExtra();
-                $item->contents = $converter->parse($item->contents);
-            @endphp
-            {!! nl2br(e(Str::limit($item->contents, 50))) !!}
-            </p>
-            <a class="card-link" href="/pedia/{{ $item->id }}">
-                続きを見る
-            </a>
-        </div>
-        <div class="card-footer">
-            <span class="mr-2">
-                投稿日時 {{ $item->created_at }}
-            </span>
-        </div>
+    <div class="card mb-4 title">
+        <a class="link-to-show" href="/pedia/{{ $item->id }}">
+            <div class="card-header">
+                <h1>{{ $item->title }}</h1>
+            </div>
+            <div class="card-footer">
+                <span class="mr-2">
+                    投稿日時 {{ $item->created_at }}
+                </span>
+            </div>
+        </a>
     </div>
     @endforeach
     {{ $items->links() }}

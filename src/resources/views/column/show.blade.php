@@ -23,7 +23,7 @@
                 </form>
             </div>
 
-            <h1 class="h5 mb-4">
+            <h1 class="mb-4 show-title">
                 {{ $item->title }}
             </h1>
 
@@ -31,7 +31,7 @@
             @php
                 $converter = new \cebe\markdown\MarkdownExtra();
                 $item->contents = $converter->parse($item->contents);
-            @endphp  
+            @endphp
             {!! $item->contents !!}
             </div>
         </div>

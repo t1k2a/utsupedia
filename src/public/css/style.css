@@ -34,78 +34,23 @@ py-4 > h1 {
 }
 
 
-/*
-    ABOUT MEページ
-*/
-header {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    align-items: center;
-}
 
-.introduction {
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-}
-
-.info {
-    margin-left: 32px;
-}
-
-.info h1 {
-    font-weight: normal;
-    font-size: 24px;
-    margin: 0;
-}
-
-.info p {
-    margin: 0;
-    margin-bottom: 16px;
-}
-
-.info ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-
-.info ul li {
-    margin-right: 8px;
-}
-
-.icon img{
-    border-radius: 50%;
-    border-width: 4px;
-    border-style: solid;
-    border-color: #343a40;
-}
-
-.about {
-    margin-left: 150px;
-    margin-right: 150px;
-    display: flex;
+.title {
     margin-bottom: 60px;
     justify-content: space-between;
     transition: background .3s;
 }
 
-.about:hover {
-        background-color: rgba(0, 0, 0, .2);
+.title:hover {
+    background-color: rgba(0, 0, 0, .2);
 }
 
-.about:nth-child(odd) {
-    flex-direction: row-reverse;
+.link-to-show {
+  text-decoration: none;
+  color:initial
 }
 
-.pic {
-    margin-bottom: auto;
-    margin-top: auto;
-    /* width: 180; */
-}
-
-.desc {
-    width: calc(100% - 180px - 32px);
+.link-to-show:hover {
+    text-decoration: none;
+    color:rgba(0, 0, 0, .5);
 }
