@@ -1,16 +1,18 @@
 /*
     共通レイアウト
 */
-
+body {
+    --none: none;
+}
 
 /* ヘッダーメニュー */
 /* スマホ以外の端末でアクセスした場合は非表示 */
 .sp-nav {
-    display: none;
+    display: var(--none);
 }
 
 .sp-header {
-    display: none;
+    display: var(--none);
 }
 
 .header-list {
@@ -20,7 +22,7 @@
 }
 
 .nav-list-item {
-    list-style: none;
+    list-style: var(--none);
     color:#ffffff;
 }
 
@@ -46,11 +48,11 @@ py-4 > h1 {
 }
 
 .link-to-show {
-  text-decoration: none;
+  text-decoration: var(--none);
   color:initial
 }
 
 .link-to-show:hover {
-    text-decoration: none;
+    text-decoration: var(--none);
     color:rgba(0, 0, 0, .5);
 }

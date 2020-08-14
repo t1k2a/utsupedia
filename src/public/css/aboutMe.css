@@ -1,6 +1,9 @@
 /*
     ABOUT MEページ
 */
+body {
+    --auto: auto;
+}
 header {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -9,8 +12,8 @@ header {
 
 .introduction {
     width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: var(--auto);
+    margin-right: var(--auto);
     display: flex;
 }
 
@@ -65,8 +68,8 @@ header {
 }
 
 .pic {
-    margin-bottom: auto;
-    margin-top: auto;
+    margin-bottom: var(--auto);
+    margin-top: var(--auto);
     /* width: 180; */
 }
 
