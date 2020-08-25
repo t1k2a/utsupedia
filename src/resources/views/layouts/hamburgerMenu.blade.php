@@ -11,24 +11,24 @@
     </div>
 
     <nav class="sp-nav">
-        <ul>
+        <ul class="nav-list-item">
             <li>
-                <a class="nav-link nav-list-item" href="/pedia">
+                <a class="nav-link" href="/pedia">
                     記事一覧
                 </a>
             </li>
             <li>
-                <a class="nav-link nav-list-item" href="/column">
+                <a class="nav-link" href="/column">
                     コラム
                 </a>
             </li>
             <li>
-                <a class="nav-link nav-list-item" id="contact2" href="#" >
+                <a class="nav-link" id="contact2" href="#" >
                     うつ病に関する相談はこちら
                 </a>
             </li>
             <li>
-                <a class="nav-link nav-list-item" href="/aboutMe">
+                <a class="nav-link" href="/aboutMe">
                     ABOUT ME
                 </a>
             </li>

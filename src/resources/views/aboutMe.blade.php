@@ -2,7 +2,6 @@
 @section('title', 'ABOUT ME')
 
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/aboutMe.css') }}'">
 
 <header>
     <div class="introduction">
@@ -10,7 +9,7 @@
                 <img src="https://avatars1.githubusercontent.com/u/20882554?s=400&v=4" alt="george" width="350" height="300">
         </div>
         <div class="info">
-            <h1>George</h1> 
+            <h1>George</h1>
             <p>うつ病を乗り越えたへっぽこエンジニア</p>
             <ul>
                 <li>

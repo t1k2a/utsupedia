@@ -15,18 +15,19 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/hamburger.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/aboutMe.css') }}">
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 </head>
 <body>
     @include('layouts.header')
 
     @include('layouts.hamburgerMenu')
- 
-    <div class="container"> 
+
+    <div class="container">
         @yield('content')
     </div>
 
     @include('layouts.modalContact')
-    <script src="{{ asset('/js/pedia.js') }}"></script> 
+    <script src="{{ asset('/js/pedia.js') }}"></script>
 </body>
 </html>
