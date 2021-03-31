@@ -12,7 +12,7 @@
         <a class="nav-link nav-list-item" id="contact" href="#" >
             うつ病に関する相談はこちら
         </a>
-        <a class="nav-link nav-list-item" href="/aboutMe">
+        <a class="nav-link nav-list-item" href="https://t1k2a.github.io/about_me/">
             ABOUT ME
         </a>
     </div>

@@ -16,7 +16,7 @@ class CreateColumnT extends Migration
         Schema::create('column_t', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->string('cotents');
+            $table->string('contents');
             $table->timestamps();
         });
     }
