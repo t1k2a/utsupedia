@@ -12,12 +12,14 @@ class SampleTest extends TestCase
 {
     use DatabaseMigrations;
 
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function testExample()
+    public function testSelectData()
+    {
+        // ダミーで利用するデータ
+        $pedia_data = factory(Encyclopedia::class)->create();
+        $this->assertEquals(1, Encyclopedia::where('contents', $pedia_data->contents)->count());
+    }
+
+    public function testCreateData()
     {
         
         $response = $this->get('/');
