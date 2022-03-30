@@ -9,7 +9,8 @@
 $ git clone https://github.com/t1k2a/utsupedia.git
 $ cd utsupedia
 $ docker-compose up -d --build
-$ docker-compose exec app ash
+$ docker-compose exec app bash
+Dockerコンテナ内
 $ composer install
 $ cp .env.example .env
 $ php artisan key:generate
@@ -24,14 +25,16 @@ $ docker-compose exec db bash -c 'mysql -u${MYSQL_USER} -p${MYSQL_PASSWORD} ${MY
 ## ビルド
 
 ```
-$ cd app
+Dockerコンテナ外
+$ cd src
 $ npm run dev
 ```
 
 ## ビルド（ホットリロード付き）
 
 ```
-$ cd app
+Dockerコンテナ外
+$ cd src
 $ npm run watch
 ```
 
